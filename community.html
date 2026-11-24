@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Community – NEX CROSSHAIR</title>
+  <meta name="description" content="Crosshairs der NEX CROSSHAIR Community: ansehen, ID kopieren und selbst veröffentlichen.">
+  <link rel="icon" href="icon.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="community.css">
+</head>
+<body>
+
+<header class="top">
+  <a class="brand" href="index.html"><img src="icon.png" alt="" width="32" height="32"> NEX CROSSHAIR</a>
+  <nav>
+    <a href="index.html">Start</a>
+    <a href="community.html" aria-current="page">Community</a>
+  </nav>
+</header>
+
+<main>
+  <section class="c-head">
+    <div>
+      <h1 class="c-title">Community</h1>
+      <p class="lead">Entdecke Crosshairs anderer Spieler. Kopiere die ID, füge sie in der App ein, fertig.</p>
+    </div>
+    <div id="auth-box" class="auth-box"></div>
+  </section>
+
+  <p id="notice" class="notice" role="status" hidden></p>
+
+  <section id="upload" class="block" hidden>
+    <h2>Eigenes Crosshair veröffentlichen</h2>
+    <p class="small up-hint">Kopiere in der App bei deinem Crosshair auf „ID dieses Crosshairs kopieren“ und füge sie hier ein. Keine beleidigenden oder rechtswidrigen Namen und Texte. Inhalte können gemeldet und entfernt werden.</p>
+    <div class="up-grid">
+      <div class="up-fields">
+        <label for="up-id">ID aus der App</label>
+        <textarea id="up-id" rows="3" maxlength="3000" placeholder="CH1-..."></textarea>
+        <label for="up-name">Name</label>
+        <input id="up-name" type="text" maxlength="40">
+        <label for="up-desc">Beschreibung (optional)</label>
+        <input id="up-desc" type="text" maxlength="200">
+        <button id="up-send" class="btn-s primary" type="button" disabled>Veröffentlichen</button>
+        <p id="up-msg" class="small" role="status"></p>
+      </div>
+      <div class="preview-box"><canvas id="up-preview" width="160" height="160"></canvas></div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div id="profile-banner" class="profile-banner" hidden></div>
+    <div class="toolbar">
+      <input id="search" type="search" maxlength="40" placeholder="Suche nach Name oder Ersteller" aria-label="Suche">
+      <select id="sort" aria-label="Sortierung">
+        <option value="new">Neueste</option>
+        <option value="popular">Beliebteste</option>
+      </select>
+    </div>
+    <div id="grid" class="grid"></div>
+    <p id="empty" class="small" hidden>Hier gibt es noch nichts. Sei der Erste!</p>
+    <p><button id="more" class="btn-s" type="button" hidden>Mehr laden</button></p>
+  </section>
+</main>
+
+<footer>
+  <p>NEX CROSSHAIR ist ein unabhängiges Projekt und steht in keiner Verbindung zu einem Spielehersteller.</p>
+</footer>
+
+<script src="draw.js"></script>
+<script src="community.js"></script>
+</body>
+</html>
