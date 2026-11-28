@@ -133,6 +133,11 @@
         who.appendChild(img);
       }
       who.appendChild(el('span', '', me.name));
+      if (me.isAdmin) {
+        var adm = el('a', 'btn-s', 'Admin');
+        adm.href = 'admin.html';
+        who.appendChild(adm);
+      }
       var out = el('button', 'btn-s', 'Abmelden');
       out.type = 'button';
       out.addEventListener('click', function () {

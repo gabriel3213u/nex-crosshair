@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Admin – NEX CROSSHAIR</title>
+  <link rel="icon" href="icon.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="community.css">
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+<header class="top">
+  <a class="brand" href="index.html"><img src="icon.png" alt="" width="32" height="32"> NEX CROSSHAIR</a>
+  <nav>
+    <a href="community.html">Community</a>
+    <a href="admin.html" aria-current="page">Admin</a>
+  </nav>
+</header>
+
+<main>
+  <section class="c-head">
+    <div>
+      <h1 class="c-title">Admin</h1>
+      <p id="who" class="lead">Wird geprüft ...</p>
+    </div>
+  </section>
+
+  <p id="notice" class="notice" role="status" hidden></p>
+
+  <div id="panel" hidden>
+    <div class="tabs" role="tablist">
+      <button class="tab on" data-tab="reports" role="tab" type="button">Meldungen</button>
+      <button class="tab" data-tab="hidden" role="tab" type="button">Versteckt</button>
+      <button class="tab" data-tab="banned" role="tab" type="button">Gesperrte Nutzer</button>
+    </div>
+    <p id="empty" class="small" hidden></p>
+    <div id="list" class="grid"></div>
+  </div>
+</main>
+
+<script src="draw.js"></script>
+<script src="admin.js"></script>
+</body>
+</html>
